@@ -50,7 +50,7 @@ function Login() {
         </button>
 
         <div style={{ marginTop: '16px', textAlign: 'center' }}>
-  <a href="http://localhost:5000/api/auth/google">
+  <a href="https://autopilot-82rd.onrender.com/api/auth/google">
     <button type="button" style={{ width: '100%', padding: '10px' }}>
       Login with Google
     </button>
