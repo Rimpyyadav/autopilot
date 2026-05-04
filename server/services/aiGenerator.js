@@ -15,11 +15,10 @@ export const generatePosts = async (niche, topics) => {
       messages: [
         {
           role: 'system',
-          content: `You are a social media expert. Generate engaging posts for ${niche} niche. 
-Keep posts under 280 characters. Be conversational and use relevant hashtags.
-Return ONLY a JSON array with 3 posts like this:
-[{"post": "post content here"}, {"post": "post content here"}, {"post": "post content here"}]
-No extra text, just the JSON array.`
+          content: `You are a social media expert. Generate a ${platform} post about ${niche}.
+${platform === 'linkedin' ? 'Professional tone, 150-200 words, insight-driven.' : ''}
+${platform === 'twitter' ? 'Casual, under 280 chars, use hashtags and emojis.' : ''}
+${platform === 'instagram' ? 'Visual storytelling, emojis, 5-10 hashtags.' : ''}`
         },
         {
           role: 'user',
